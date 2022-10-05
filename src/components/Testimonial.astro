@@ -1,0 +1,23 @@
+---
+interface Props {
+	name: string;
+	image: string;
+	testimonial: string;
+}
+const { name, image, testimonial } = Astro.props;
+---
+
+<li
+	id="testimonial"
+	class="flex flex-col relative items-center bg-neutralLightGray pt-16 px-8 gap-4 min-w-full"
+>
+	<img
+		src={`../images/${image}`}
+		alt={`${name} profile picture`}
+		class="max-w-full w-16 h-16 rounded-full absolute -top-8 left-1/2 transform -translate-x-1/2"
+	/>
+	<h4 class="text-xl font-bold text-primaryDarkBlue">{name}</h4>
+	<blockquote class="text-neutralGrayishBlue text-center leading-6">
+		{testimonial}
+	</blockquote>
+</li>

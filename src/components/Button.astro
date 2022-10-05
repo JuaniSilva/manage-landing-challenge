@@ -1,0 +1,20 @@
+---
+interface Props {
+	classes?: string;
+	type?: "primary" | "secondary";
+	centered?: boolean;
+}
+let { classes, type = "primary", centered } = Astro.props;
+const types = {
+	primary: "bg-primaryBrightRed text-neutralLightGray",
+	secondary: "bg-white text-primaryBrightRed",
+};
+---
+
+<button
+	class={` ${classes} ${centered ? "mx-auto flex" : ""} ${
+		types[type]
+	} px-8 py-4 font-bold self-center rounded-[2rem] drop-shadow-buttonShadow"`}
+>
+	<slot />
+</button>

@@ -1,0 +1,94 @@
+---
+import Testimonial from "./Testimonial.astro";
+
+const testimonials = [
+	{
+		name: "Anisha Li",
+		image: "avatar-anisha.png",
+		testimonial:
+			"“Manage has supercharged our team’s workflow. The ability to	maintain visibility on larger milestones at all times keeps everyone motivated.”",
+	},
+	{
+		name: "Ali Bravo",
+		image: "avatar-ali.png",
+		testimonial:
+			"“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”",
+	},
+	{
+		name: "Richard Watts",
+		image: "avatar-richard.png",
+		testimonial:
+			"“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”",
+	},
+	{
+		name: "Shanai Gough",
+		image: "avatar-shanai.png",
+		testimonial:
+			"“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”",
+	},
+];
+---
+
+<section class="testimonials">
+	<div class="wrap">
+		<ul class="slider flex gap-8">
+			{
+				testimonials.map((testimonial) => (
+					<Testimonial
+						name={testimonial.name}
+						image={testimonial.image}
+						testimonial={testimonial.testimonial}
+					/>
+				))
+			}
+		</ul>
+		<ul
+			class="dots flex gap-2 w-full justify-center mt-10"
+			id="testimonial-dots"
+		>
+			{
+				testimonials.map((_, i) => (
+					<li class="w-2 h-2 border border-primaryBrightRed bg-white cursor-pointer rounded-full  " />
+				))
+			}
+		</ul>
+	</div>
+</section>
+<style>
+	ul.dots li.active {
+		background-color: #f25f3a;
+	}
+</style>
+<script defer>
+	const slider = document.querySelector(".slider");
+	const dots = document.querySelectorAll(".dots li");
+	let counter = 0;
+	const windowWidth = window.innerWidth;
+
+	dots.forEach((dot, index) => {
+		dot.addEventListener("click", () => {
+			transitionTestimonial(index);
+		});
+	});
+
+	const transitionTestimonial = (index) => {
+		slider.style.transition = "transform 0.4s ease-in-out";
+		counter = index;
+		slider.style.transform = "translateX(" + -windowWidth * counter + "px)";
+
+		for (let dot of dots) {
+			dot.classList.remove("active");
+		}
+		dots[counter].classList.add("active");
+	};
+	const autoTransition = () => {
+		if (counter >= slider.children.length - 1) {
+			counter = 0;
+		} else {
+			counter++;
+		}
+		transitionTestimonial(counter);
+		setTimeout(autoTransition, 5000);
+	};
+	autoTransition();
+</script>

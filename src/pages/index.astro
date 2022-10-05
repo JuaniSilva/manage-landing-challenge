@@ -1,0 +1,192 @@
+---
+import Button from "../components/Button.astro";
+import Facebook from "../components/icons/Facebook.astro";
+import Instagram from "../components/icons/Instagram.astro";
+import Logo from "../components/icons/Logo.astro";
+import Pintereset from "../components/icons/Pintereset.astro";
+import Twitter from "../components/icons/Twitter.astro";
+import Youtube from "../components/icons/Youtube.astro";
+import Navbar from "../components/Navbar.astro";
+import Slider from "../components/Slider.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro">
+	<main
+		class="relative bg-top-corner bg-right-top bg-no-repeat bg-white overflow-hidden"
+	>
+		<Navbar />
+		<img
+			src="../public/images/illustration-intro.svg"
+			alt=""
+			class="px-9"
+		/>
+		<section class="flex flex-col gap-4 justify-center mt-11 px-8">
+			<h2 class="text-3xl font-bold text-center text-primaryDarkBlue">
+				Bring everyone together to build better products.
+			</h2>
+			<p class="mb-10 text-neutralGrayishBlue text-center">
+				Manage makes it simple for software teams to plan day-to-day
+				tasks while keeping the larger team goals in view.
+			</p>
+			<Button>Get Started</Button>
+		</section>
+
+		<section
+			class="flex flex-col gap-4 justify-center mt-[100px] [p]:font-bold px-8"
+		>
+			<h2 class="text-3xl font-bold text-center text-primaryDarkBlue">
+				What’s different about Manage?
+			</h2>
+			<p class="text-neutralGrayishBlue text-center">
+				Manage provides all the functionality your team needs, without
+				the complexity. Our software is tailor-made for modern digital
+				product teams.
+			</p>
+		</section>
+
+		<ol
+			class="list-inside marker:py-4 marker:text-neutralPaleRed my-14 ml-4"
+		>
+			<div class="flex flex-col gap-4">
+				<li
+					class="before:bg-primaryBrightRed before:w-16 before:h-10 before:flex before:items-center before:justify-center before:rounded-full before:text-neutralLightGray rounded-l-full flex items-center gap-4 bg-neutralPaleRed"
+				>
+					<h3 class="font-bold text-primaryDarkBlue">
+						Track company-wide progress
+					</h3>
+				</li>
+				<p class="text-neutralGrayishBlue">
+					See how your day-to-day tasks fit into the wider vision. Go
+					from tracking progress at the milestone level all the way
+					done to the smallest of details. Never lose sight of the
+					bigger picture again.
+				</p>
+			</div>
+			<div class="flex flex-col gap-4 mt-14">
+				<li
+					class="before:content-custom before:bg-primaryBrightRed before:w-16 before:h-10 before:flex before:items-center before:justify-center before:rounded-full before:text-neutralLightGray rounded-l-full flex items-center gap-4 bg-neutralPaleRed"
+				>
+					<h3 class="font-bold text-primaryDarkBlue">
+						Advanced built-in reports
+					</h3>
+				</li>
+				<p class="text-neutralGrayishBlue">
+					Set internal delivery estimates and track progress toward
+					company goals. Our customisable dashboard helps you build
+					out the reports you need to keep key stakeholders informed.
+				</p>
+			</div>
+			<div class="flex flex-col gap-4 mt-14">
+				<li
+					class="before:content-custom before:bg-primaryBrightRed before:w-16 before:h-10 before:flex before:items-center before:justify-center before:rounded-full before:text-neutralLightGray rounded-l-full flex items-center gap-4 bg-neutralPaleRed"
+				>
+					<h3 class="font-bold text-primaryDarkBlue">
+						Everything you need in one place
+					</h3>
+				</li>
+				<p class="text-neutralGrayishBlue">
+					Stop jumping from one service to another to communicate,
+					store files, track tasks and share documents. Manage offers
+					an all-in-one team productivity solution.
+				</p>
+			</div>
+		</ol>
+		<section class="px-4 py-8 relative w-screen">
+			<h2
+				class="text-3xl font-bold text-center text-primaryDarkBlue mb-24 sticky top-0 left-0 w-full"
+			>
+				What they’ve said
+			</h2>
+
+			<Slider />
+		</section>
+		<Button classes="my-10" centered>Get Started</Button>
+		<section class="bg-primaryBrightRed py-24 px-8">
+			<h2 class="text-4xl font-bold text-white text-center">
+				Simplify how your team works today.
+			</h2>
+			<Button classes="mt-8" centered type="secondary">Get Started</Button
+			>
+		</section>
+		<footer class="bg-neutralVeryDarkBlue px-6 pt-12 pb-4">
+			<form action="" class="flex gap-4">
+				<input type="text" class="p-2 w-full rounded-full" />
+				<Button>GO</Button>
+			</form>
+			<nav class="flex flex-col gap-8">
+				<ul class="grid grid-cols-2 gap-4 text-white mt-10 mx-8">
+					<li class="hover:text-primaryBrightRed transition-all">
+						<a href="#">Home</a>
+					</li>
+					<li class="hover:text-primaryBrightRed transition-all">
+						<a href="#">Carrers</a>
+					</li>
+					<li class="hover:text-primaryBrightRed transition-all">
+						<a href="#">Pricing</a>
+					</li>
+					<li class="hover:text-primaryBrightRed transition-all">
+						<a href="#">Community</a>
+					</li>
+					<li class="hover:text-primaryBrightRed transition-all">
+						<a href="#">Products</a>
+					</li>
+					<li class="hover:text-primaryBrightRed transition-all">
+						<a href="#">Privacy Policy</a>
+					</li>
+					<li class="hover:text-primaryBrightRed transition-all">
+						<a href="#">About Us</a>
+					</li>
+				</ul>
+				<ul class="flex justify-around">
+					<li>
+						<a href="#"><Facebook /></a>
+					</li>
+					<li>
+						<a href="#"><Youtube /></a>
+					</li>
+					<li>
+						<a href="#"><Twitter /></a>
+					</li>
+					<li>
+						<a href="#"><Pintereset /></a>
+					</li>
+					<li>
+						<a href="#"><Instagram /></a>
+					</li>
+				</ul>
+				<a href="" class="flex mx-auto my-4">
+					<Logo />
+				</a>
+			</nav>
+			<p class="text-center text-neutralGrayishBlue mt-10">
+				Copyright 2020. All Rights Reserved
+			</p>
+		</footer>
+	</main>
+</Layout>
+<style>
+	ol {
+		counter-reset: custom-counter !important;
+	}
+	ol li {
+		counter-increment: custom-counter !important;
+	}
+	ol li::before {
+		content: "0" counter(custom-counter) !important;
+	}
+	.slider {
+		display: flex;
+	}
+
+	.slider > * {
+		width: 100%;
+		flex: 0 0 auto;
+	}
+</style>
+<script type="module">
+	const slider = new A11YSlider(document.querySelector(".slider"), {
+		adaptiveHeight: true,
+		dots: true,
+	});
+</script>
