@@ -12,9 +12,9 @@ const types = {
 ---
 
 <button
-	class={` ${classes} ${centered ? "mx-auto flex" : ""} ${
+	class={`  ${centered ? "mx-auto flex" : ""} ${
 		types[type]
-	} px-8 py-4 font-bold self-center rounded-[2rem] drop-shadow-buttonShadow"`}
+	} px-8 py-4 font-bold self-center rounded-[2rem] drop-shadow-buttonShadow" ${classes}`}
 >
 	<slot />
 </button>

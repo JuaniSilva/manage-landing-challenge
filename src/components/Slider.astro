@@ -1,4 +1,5 @@
 ---
+// Hacer todo esto un componente de react :D
 import Testimonial from "./Testimonial.astro";
 
 const testimonials = [
@@ -46,27 +47,42 @@ const testimonials = [
 			class="dots flex gap-2 w-full justify-center mt-10"
 			id="testimonial-dots"
 		>
-			{
-				testimonials.map((_, i) => (
-					<li class="w-2 h-2 border border-primaryBrightRed bg-white cursor-pointer rounded-full  " />
-				))
-			}
 		</ul>
 	</div>
 </section>
-<style>
-	ul.dots li.active {
-		background-color: #f25f3a;
-	}
-</style>
 <script defer>
 	const slider = document.querySelector(".slider");
-	const dots = document.querySelectorAll(".dots li");
+	const slides = document.querySelectorAll(".slider li");
+	const slideWidth = slides[0].offsetWidth;
+
 	let counter = 0;
 	const windowWidth = window.innerWidth;
+	const gap = 32 / 2;
+	const amountOfSlides =
+		slides.length - Math.floor(windowWidth / (slideWidth + gap)) + 1;
 
+	const dotsParent = document.querySelector(".dots");
+	const dot = document.createElement("li");
+	dot.classList.add(
+		"w-2",
+		"h-2",
+		"border",
+		"border-primaryBrightRed",
+		"bg-white",
+		"cursor-pointer",
+		"rounded-full"
+	);
+
+	for (let i = 0; i < amountOfSlides; i++) {
+		dotsParent.appendChild(dot.cloneNode(true));
+	}
+
+	const dots = document.querySelectorAll(".dots li");
+	let timeout;
 	dots.forEach((dot, index) => {
 		dot.addEventListener("click", () => {
+			clearTimeout(timeout);
+			timeout = setTimeout(autoTransition, 5000);
 			transitionTestimonial(index);
 		});
 	});
@@ -74,21 +90,24 @@ const testimonials = [
 	const transitionTestimonial = (index) => {
 		slider.style.transition = "transform 0.4s ease-in-out";
 		counter = index;
-		slider.style.transform = "translateX(" + -windowWidth * counter + "px)";
+		const translateWidth = windowWidth > 540 ? 540 + gap : windowWidth;
+		slider.style.transform =
+			"translateX(" + -translateWidth * counter + "px)";
 
 		for (let dot of dots) {
-			dot.classList.remove("active");
+			dot.classList.remove("bg-red");
 		}
-		dots[counter].classList.add("active");
+		dots[counter].classList.add("bg-red");
 	};
+
 	const autoTransition = () => {
-		if (counter >= slider.children.length - 1) {
+		if (counter >= amountOfSlides - 1) {
 			counter = 0;
 		} else {
 			counter++;
 		}
 		transitionTestimonial(counter);
-		setTimeout(autoTransition, 5000);
+		timeout = setTimeout(autoTransition, 5000);
 	};
 	autoTransition();
 </script>

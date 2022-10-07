@@ -13,88 +13,106 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Welcome to Astro">
 	<main
-		class="relative bg-top-corner bg-right-top bg-no-repeat bg-white overflow-hidden"
+		class="relative bg-top-corner bg-right-top bg-no-repeat m-auto overflow-hidden"
 	>
 		<Navbar />
-		<img
-			src="../public/images/illustration-intro.svg"
-			alt=""
-			class="px-9"
-		/>
-		<section class="flex flex-col gap-4 justify-center mt-11 px-8">
-			<h2 class="text-3xl font-bold text-center text-primaryDarkBlue">
-				Bring everyone together to build better products.
-			</h2>
-			<p class="mb-10 text-neutralGrayishBlue text-center">
-				Manage makes it simple for software teams to plan day-to-day
-				tasks while keeping the larger team goals in view.
-			</p>
-			<Button>Get Started</Button>
-		</section>
-
-		<section
-			class="flex flex-col gap-4 justify-center mt-[100px] [p]:font-bold px-8"
+		<div
+			class="flex flex-col items-center lg:flex-row lg:max-w-5xl lg:m-auto"
 		>
-			<h2 class="text-3xl font-bold text-center text-primaryDarkBlue">
-				What’s different about Manage?
-			</h2>
-			<p class="text-neutralGrayishBlue text-center">
-				Manage provides all the functionality your team needs, without
-				the complexity. Our software is tailor-made for modern digital
-				product teams.
-			</p>
-		</section>
+			<img
+				src="../public/images/illustration-intro.svg"
+				alt=""
+				class="px-9 max-w-[550px] lg:order-2"
+			/>
+			<section
+				class="flex flex-col gap-4 justify-center mt-11 px-8 lg:justify-start"
+			>
+				<h2
+					class="text-3xl font-bold text-center text-primaryDarkBlue lg:text-left lg:text-5xl"
+				>
+					Bring everyone together to build better products.
+				</h2>
+				<p
+					class="mb-10 mx-auto text-neutralGrayishBlue text-center lg:text-left max-w-[32ch] lg:mx-0"
+				>
+					Manage makes it simple for software teams to plan day-to-day
+					tasks while keeping the larger team goals in view.
+				</p>
+				<Button classes="lg:self-start">Get Started</Button>
+			</section>
+		</div>
 
-		<ol
-			class="list-inside marker:py-4 marker:text-neutralPaleRed my-14 ml-4"
+		<div
+			class="flex flex-col lg:flex-row lg:max-w-5xl lg:mx-auto mt-[100px]"
 		>
-			<div class="flex flex-col gap-4">
-				<li
-					class="before:bg-primaryBrightRed before:w-16 before:h-10 before:flex before:items-center before:justify-center before:rounded-full before:text-neutralLightGray rounded-l-full flex items-center gap-4 bg-neutralPaleRed"
+			<section
+				class="flex flex-col gap-4 justify-center px-8 lg:gap-8 lg:justify-start lg:grow lg:basis-0"
+			>
+				<h2
+					class="text-3xl font-bold text-center text-primaryDarkBlue lg:text-left lg:text-4xl"
 				>
-					<h3 class="font-bold text-primaryDarkBlue">
-						Track company-wide progress
-					</h3>
-				</li>
-				<p class="text-neutralGrayishBlue">
-					See how your day-to-day tasks fit into the wider vision. Go
-					from tracking progress at the milestone level all the way
-					done to the smallest of details. Never lose sight of the
-					bigger picture again.
-				</p>
-			</div>
-			<div class="flex flex-col gap-4 mt-14">
-				<li
-					class="before:content-custom before:bg-primaryBrightRed before:w-16 before:h-10 before:flex before:items-center before:justify-center before:rounded-full before:text-neutralLightGray rounded-l-full flex items-center gap-4 bg-neutralPaleRed"
+					What’s different about Manage?
+				</h2>
+				<p
+					class="text-neutralGrayishBlue mx-auto text-center lg:text-left max-w-[32ch] lg:mx-0"
 				>
-					<h3 class="font-bold text-primaryDarkBlue">
-						Advanced built-in reports
-					</h3>
-				</li>
-				<p class="text-neutralGrayishBlue">
-					Set internal delivery estimates and track progress toward
-					company goals. Our customisable dashboard helps you build
-					out the reports you need to keep key stakeholders informed.
+					Manage provides all the functionality your team needs,
+					without the complexity. Our software is tailor-made for
+					modern digital product teams.
 				</p>
-			</div>
-			<div class="flex flex-col gap-4 mt-14">
-				<li
-					class="before:content-custom before:bg-primaryBrightRed before:w-16 before:h-10 before:flex before:items-center before:justify-center before:rounded-full before:text-neutralLightGray rounded-l-full flex items-center gap-4 bg-neutralPaleRed"
-				>
-					<h3 class="font-bold text-primaryDarkBlue">
-						Everything you need in one place
-					</h3>
-				</li>
-				<p class="text-neutralGrayishBlue">
-					Stop jumping from one service to another to communicate,
-					store files, track tasks and share documents. Manage offers
-					an all-in-one team productivity solution.
-				</p>
-			</div>
-		</ol>
-		<section class="px-4 py-8 relative w-screen">
+			</section>
+			<ol
+				class="flex flex-col list-inside marker:py-4 marker:text-neutralPaleRed my-14 ml-4 lg:grow lg:basis-0 lg:my-0"
+			>
+				<div class="flex flex-col gap-4">
+					<li
+						class="before:bg-primaryBrightRed before:w-16 before:h-10 before:flex before:items-center before:justify-center before:rounded-full before:text-neutralLightGray rounded-l-full flex items-center gap-4 bg-neutralPaleRed lg:bg-transparent"
+					>
+						<h3 class="font-bold text-primaryDarkBlue">
+							Track company-wide progress
+						</h3>
+					</li>
+					<p class="text-neutralGrayishBlue lg:pl-20">
+						See how your day-to-day tasks fit into the wider vision.
+						Go from tracking progress at the milestone level all the
+						way done to the smallest of details. Never lose sight of
+						the bigger picture again.
+					</p>
+				</div>
+				<div class="flex flex-col gap-4 mt-14">
+					<li
+						class="before:content-custom before:bg-primaryBrightRed before:w-16 before:h-10 before:flex before:items-center before:justify-center before:rounded-full before:text-neutralLightGray rounded-l-full flex items-center gap-4 bg-neutralPaleRed lg:bg-transparent"
+					>
+						<h3 class="font-bold text-primaryDarkBlue">
+							Advanced built-in reports
+						</h3>
+					</li>
+					<p class="text-neutralGrayishBlue lg:pl-20">
+						Set internal delivery estimates and track progress
+						toward company goals. Our customisable dashboard helps
+						you build out the reports you need to keep key
+						stakeholders informed.
+					</p>
+				</div>
+				<div class="flex flex-col gap-4 mt-14">
+					<li
+						class="before:content-custom before:bg-primaryBrightRed before:w-16 before:h-10 before:flex before:items-center before:justify-center before:rounded-full before:text-neutralLightGray rounded-l-full flex items-center gap-4 bg-neutralPaleRed lg:bg-transparent"
+					>
+						<h3 class="font-bold text-primaryDarkBlue">
+							Everything you need in one place
+						</h3>
+					</li>
+					<p class="text-neutralGrayishBlue lg:pl-20">
+						Stop jumping from one service to another to communicate,
+						store files, track tasks and share documents. Manage
+						offers an all-in-one team productivity solution.
+					</p>
+				</div>
+			</ol>
+		</div>
+		<section class="px-4 py-8 relative w-screen lg:mt-16">
 			<h2
-				class="text-3xl font-bold text-center text-primaryDarkBlue mb-24 sticky top-0 left-0 w-full"
+				class="text-3xl font-bold text-center text-primaryDarkBlue mb-24 w-full lg:text-4xl"
 			>
 				What they’ve said
 			</h2>
@@ -103,71 +121,92 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 		<Button classes="my-10" centered>Get Started</Button>
 		<section class="bg-primaryBrightRed py-24 px-8">
-			<h2 class="text-4xl font-bold text-white text-center">
-				Simplify how your team works today.
-			</h2>
-			<Button classes="mt-8" centered type="secondary">Get Started</Button
-			>
+			<div class="lg:max-w-5xl lg:mx-auto lg:flex lg:justify-between">
+				<h2
+					class="text-4xl font-bold text-white text-center lg:text-left lg:max-w-[20ch]"
+				>
+					Simplify how your team works today.
+				</h2>
+				<Button classes="mt-8 lg:mr-0" centered type="secondary"
+					>Get Started</Button
+				>
+			</div>
 		</section>
-		<footer class="bg-neutralVeryDarkBlue px-6 pt-12 pb-4">
-			<form action="" class="flex gap-4">
-				<input type="text" class="p-2 w-full rounded-full" />
-				<Button>GO</Button>
-			</form>
-			<nav class="flex flex-col gap-8">
-				<ul class="grid grid-cols-2 gap-4 text-white mt-10 mx-8">
-					<li class="hover:text-primaryBrightRed transition-all">
-						<a href="#">Home</a>
-					</li>
-					<li class="hover:text-primaryBrightRed transition-all">
-						<a href="#">Carrers</a>
-					</li>
-					<li class="hover:text-primaryBrightRed transition-all">
-						<a href="#">Pricing</a>
-					</li>
-					<li class="hover:text-primaryBrightRed transition-all">
-						<a href="#">Community</a>
-					</li>
-					<li class="hover:text-primaryBrightRed transition-all">
-						<a href="#">Products</a>
-					</li>
-					<li class="hover:text-primaryBrightRed transition-all">
-						<a href="#">Privacy Policy</a>
-					</li>
-					<li class="hover:text-primaryBrightRed transition-all">
-						<a href="#">About Us</a>
-					</li>
-				</ul>
-				<ul class="flex justify-around">
-					<li>
-						<a href="#"><Facebook /></a>
-					</li>
-					<li>
-						<a href="#"><Youtube /></a>
-					</li>
-					<li>
-						<a href="#"><Twitter /></a>
-					</li>
-					<li>
-						<a href="#"><Pintereset /></a>
-					</li>
-					<li>
-						<a href="#"><Instagram /></a>
-					</li>
-				</ul>
-				<a href="" class="flex mx-auto my-4">
-					<Logo />
-				</a>
-			</nav>
-			<p class="text-center text-neutralGrayishBlue mt-10">
-				Copyright 2020. All Rights Reserved
-			</p>
+		<footer class="bg-neutralVeryDarkBlue px-6 pt-12 pb-16 lg:flex">
+			<div class="lg:max-w-5xl lg:mx-auto lg:flex w-full relative">
+				<form
+					id="news-letter"
+					class="flex gap-2 lg:order-2 lg:self-start"
+				>
+					<input
+						type="text"
+						class="px-6 py-4 w-full rounded-full text-sm lg:self-center"
+						placeholder="Updates in your inbox..."
+					/>
+					<Button>GO</Button>
+				</form>
+				<nav class="flex flex-col gap-8 lg:flex-row lg:order-1 lg:grow">
+					<ul
+						class="grid grid-cols-2 gap-4 text-white mt-10 mx-8 lg:order-2 lg:gap-x-[33%] lg:grow lg:mt-0"
+					>
+						<li class="hover:text-primaryBrightRed transition-all">
+							<a href="#">Home</a>
+						</li>
+						<li class="hover:text-primaryBrightRed transition-all">
+							<a href="#">Carrers</a>
+						</li>
+						<li class="hover:text-primaryBrightRed transition-all">
+							<a href="#">Pricing</a>
+						</li>
+						<li class="hover:text-primaryBrightRed transition-all">
+							<a href="#">Community</a>
+						</li>
+						<li class="hover:text-primaryBrightRed transition-all">
+							<a href="#">Products</a>
+						</li>
+						<li class="hover:text-primaryBrightRed transition-all">
+							<a href="#">Privacy Policy</a>
+						</li>
+						<li class="hover:text-primaryBrightRed transition-all">
+							<a href="#">About Us</a>
+						</li>
+					</ul>
+					<div class="flex flex-col lg:order-1 lg: justify-between">
+						<ul class="flex justify-around lg: gap-4 lg:order-2">
+							<li>
+								<a href="#"><Facebook /></a>
+							</li>
+							<li>
+								<a href="#"><Youtube /></a>
+							</li>
+							<li>
+								<a href="#"><Twitter /></a>
+							</li>
+							<li>
+								<a href="#"><Pintereset /></a>
+							</li>
+							<li>
+								<a href="#"><Instagram /></a>
+							</li>
+						</ul>
+						<a href="#" class="flex mx-auto my-4">
+							<Logo />
+						</a>
+					</div>
+				</nav>
+				<p
+					class="text-center text-sm text-neutralGrayishBlue mt-10 lg:absolute lg:bottom-0 lg:right-0"
+				>
+					Copyright 2020. All Rights Reserved
+				</p>
+			</div>
 		</footer>
 	</main>
 </Layout>
 <style>
 	ol {
 		counter-reset: custom-counter !important;
+		grid-template-columns: min-content 1fr;
 	}
 	ol li {
 		counter-increment: custom-counter !important;
@@ -175,18 +214,15 @@ import Layout from "../layouts/Layout.astro";
 	ol li::before {
 		content: "0" counter(custom-counter) !important;
 	}
-	.slider {
-		display: flex;
-	}
-
-	.slider > * {
-		width: 100%;
-		flex: 0 0 auto;
-	}
 </style>
 <script type="module">
-	const slider = new A11YSlider(document.querySelector(".slider"), {
-		adaptiveHeight: true,
-		dots: true,
+	const newsLetterForm = document.getElementById("news-letter");
+	newsLetterForm.addEventListener("submit", (e) => {
+		console.log("estoy aca?");
+		e.preventDefault();
+		const email = newsLetterForm.querySelector("input").value;
+		if (email) {
+			alert(`Thank you for subscribing to our newsletter, ${email}`);
+		}
 	});
 </script>

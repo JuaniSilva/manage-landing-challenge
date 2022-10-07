@@ -8,8 +8,7 @@ const { name, image, testimonial } = Astro.props;
 ---
 
 <li
-	id="testimonial"
-	class="flex flex-col relative items-center bg-neutralLightGray pt-16 px-8 gap-4 min-w-full"
+	class="flex flex-col relative items-center bg-neutralLightGray pt-16 px-8 gap-4 w-full shrink-0 max-w-[540px]"
 >
 	<img
 		src={`../images/${image}`}
