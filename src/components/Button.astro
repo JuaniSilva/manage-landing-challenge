@@ -6,15 +6,17 @@ interface Props {
 }
 let { classes, type = "primary", centered } = Astro.props;
 const types = {
-	primary: "bg-primaryBrightRed text-neutralLightGray",
-	secondary: "bg-white text-primaryBrightRed",
+	primary:
+		"bg-primaryBrightRed text-neutralLightGray drop-shadow-primaryButtonShadow hover:bg-lighPrimaryBrightRed",
+	secondary:
+		"bg-white text-primaryBrightRed drop-shadow-secondaryButtonShadow hover:text-lighPrimaryBrightRed",
 };
 ---
 
 <button
 	class={`  ${centered ? "mx-auto flex" : ""} ${
 		types[type]
-	} px-8 py-4 font-bold self-center rounded-[2rem] drop-shadow-buttonShadow" ${classes}`}
+	} px-8 py-4 font-bold self-center rounded-[2rem]  transition-colors duration-500" ${classes}`}
 >
 	<slot />
 </button>

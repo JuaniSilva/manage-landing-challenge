@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 				primaryBrightRed: "#f25f3a",
+				lighPrimaryBrightRed: "#f79e87",
 				primaryDarkBlue: "#242d52",
 				neutralGrayishBlue: "#9095a7",
 				neutralVeryDarkBlue: "#1d1e25",
@@ -15,7 +16,8 @@ module.exports = {
 				"top-corner": "url('/images/bg-tablet-pattern.svg')",
 			},
 			dropShadow: {
-				buttonShadow: '0px 2px 4px #f25f3a'
+				primaryButtonShadow: '0px 1px 2px #f25f3a',
+				secondaryButtonShadow: '0px 1px 2px #fff',
 			},
 			content: {
 				'custom': 'counter(custom-counter)'

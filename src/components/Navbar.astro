@@ -1,40 +1,45 @@
-<nav class="flex justify-between py-10 px-8 max-w-5xl m-auto">
+---
+import Button from "./Button.astro";
+---
+
+<nav class="flex justify-between py-10 px-8 max-w-5xl m-auto items-center">
 	<a href="#">
 		<img src="../../public/images/logo.svg" alt="" />
 	</a>
 	<ul
 		id="mobile-menu"
-		class="absolute top-[100px] -translate-y-[200%] left-0 right-0 mx-auto bg-neutralLightGray w-full max-w-[90%] flex items-center justify-center py-10 flex-col gap-4 rounded shadow-sm transition-all duration-500 ease-in-out"
+		class="absolute top-[100px] -translate-y-[200%] left-0 right-0 mx-auto bg-neutralLightGray w-full max-w-[90%] flex items-center justify-center py-10 flex-col gap-4 rounded shadow-sm transition-all duration-500 ease-in-out lg:static lg:translate-y-0 lg:flex-row lg:gap-8 lg:shadow-none lg:bg-transparent lg:py-0 lg:items-center lg:w-fit"
 	>
 		<li
-			class="text-primaryDarkBlue font-bold hover:text-neutralGrayishBlue"
+			class="text-primaryDarkBlue font-bold hover:text-neutralGrayishBlue transition"
 		>
 			<a href="#">Pricing</a>
 		</li>
 		<li
-			class="text-primaryDarkBlue font-bold hover:text-neutralGrayishBlue"
+			class="text-primaryDarkBlue font-bold hover:text-neutralGrayishBlue transition"
 		>
 			<a href="#">Product</a>
 		</li>
 		<li
-			class="text-primaryDarkBlue font-bold hover:text-neutralGrayishBlue"
+			class="text-primaryDarkBlue font-bold hover:text-neutralGrayishBlue transition"
 		>
 			<a href="#">About Us</a>
 		</li>
 		<li
-			class="text-primaryDarkBlue font-bold hover:text-neutralGrayishBlue"
+			class="text-primaryDarkBlue font-bold hover:text-neutralGrayishBlue transition"
 		>
 			<a href="#">Carrers</a>
 		</li>
 		<li
-			class="text-primaryDarkBlue font-bold hover:text-neutralGrayishBlue"
+			class="text-primaryDarkBlue font-bold hover:text-neutralGrayishBlue transition"
 		>
 			<a href="#">Community</a>
 		</li>
 	</ul>
-	<button id="hamburger-menu">
+	<button id="hamburger-menu" class="lg:hidden">
 		<img src="../../public/images/icon-hamburger.svg" alt="" />
 	</button>
+	<Button classes="hidden lg:flex w-max">Get Started</Button>
 </nav>
 <script type="module">
 	const menu = document.getElementById("hamburger-menu");
