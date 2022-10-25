@@ -1,49 +1,63 @@
-# Welcome to [Astro](https://astro.build)
+# Frontend Mentor - Manage landing page solution
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+This is a solution to the [Manage landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Table of contents
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Continued development](#continued-development)
+-   [Author](#author)
 
+## Overview
 
-## 🚀 Project Structure
+### The challenge
 
-Inside of your Astro project, you'll see the following folders and files:
+Users should be able to:
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+-   View the optimal layout for the site depending on their device's screen size
+-   See hover states for all interactive elements on the page
+-   See all testimonials in a horizontal slider
+-   (WIP)Receive an error message when the newsletter sign up `form` is submitted if:
+    -   The `input` field is empty
+    -   The email address is not formatted correctly
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Screenshot
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+![](./public/screenshots/page-screenshot.png)
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Links
 
-## 🧞 Commands
+-   Solution URL: [https://your-solution-url.com](https://github.com/JuaniSilva/manage-landing-challenge)
+-   Live Site URL: [https://juanisilva.github.io/manage-landing-challenge/](https://juanisilva.github.io/manage-landing-challenge/)
 
-All commands are run from the root of the project, from a terminal:
+## My process
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+### Built with
 
-## 👀 Want to learn more?
+-   Semantic HTML5 markup
+-   Flexbox
+-   CSS Grid
+-   Mobile-first workflow
+-   [Astro](https://astro.build/) - Astro is an all-in-one web framework for building fast, content-focused websites.
+-   [React](https://reactjs.org/) - JS library
+-   [TailwindCSS](https://tailwindcss.com/) - For styles
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### What I learned
+
+Building this landing I learned astro since it was my first time using it. Also learned to style list numbers markers which was a solution that I hadn't tried before (maybe it wasn't the best solution but my goal was to experiment with it)
+
+### Continued development
+
+I still need to finish the input validation and add some background images but I'm happy with the result I achieved. On the other hand, the slider needs some finals touches which I will try to find out how to fix the minor bug it has.
+
+## Author
+
+-   Website - [Juani Silva](https://github.com/JuaniSilva)
+-   Frontend Mentor - [@JuaniSilva](https://www.frontendmentor.io/profile/JuaniSilva)
+-   Twitter - [@Juani_Silva13](https://twitter.com/Juani_Silva13)
