@@ -20,7 +20,8 @@ module.exports = {
 				secondaryButtonShadow: '0px 1px 2px #fff',
 			},
 			content: {
-				'custom': 'counter(custom-counter)'
+				'custom': 'counter(custom-counter)',
+				'blob': "url('./images/bg-tablet-pattern.svg')"
 			}
 
 		},

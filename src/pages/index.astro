@@ -8,17 +8,16 @@ import Twitter from "../components/icons/Twitter.astro";
 import Youtube from "../components/icons/Youtube.astro";
 import Navbar from "../components/Navbar.astro";
 import Slider from "../components/Slider.jsx";
-import Testimonial from "../components/Testimonial.jsx";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Manage">
 	<main
-		class="relative bg-top-corner bg-right-top bg-no-repeat m-auto overflow-hidden"
+		class="relative bg-right-top bg-no-repeat m-auto overflow-hidden z-10"
 	>
 		<Navbar />
 		<div
-			class="flex flex-col items-center lg:flex-row lg:max-w-5xl lg:m-auto"
+			class="flex flex-col items-center lg:flex-row lg:max-w-5xl lg:m-auto after:bg-top-corner after:content-[''] after:absolute after:top-0 after:right-0 after:aspect-[1/1.2] after:w-[87%] after:max-h-[70vh] after:bg-left-bottom after:bg-no-repeat after:-z-10 md:after:w-[45%]"
 		>
 			<img
 				src="../public/images/illustration-intro.svg"
@@ -120,7 +119,9 @@ import Layout from "../layouts/Layout.astro";
 			<Slider client:load />
 		</section>
 		<Button classes="my-10" centered>Get Started</Button>
-		<section class="bg-primaryBrightRed py-24 px-8">
+		<section
+			class="bg-primaryBrightRed py-24 px-8 relative isolate before:absolute before:bg-top-corner before:content-[''] before:inset-0 before:-z-10 before:opacity-10 before:bg-no-repeat before:bg-[20rem]"
+		>
 			<div class="lg:max-w-5xl lg:mx-auto lg:flex lg:justify-between">
 				<h2
 					class="text-4xl font-bold text-white text-center lg:text-left lg:max-w-[20ch]"
